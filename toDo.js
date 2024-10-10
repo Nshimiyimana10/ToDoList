@@ -1,9 +1,17 @@
-const taskInput = document.getElementById("task-input");
-const inputValue = taskInput.value;
-const button = document.getElementById("add-task-btn");
+const input = document.getElementById("my-input");
+const value = input.value;
+const button = document.getElementById("submit-btn");
 
-button.addEventListener('click', getInputValue)
+button.addEventListener('click',  taskList);
 
-function getInputValue(){
-    console.log(inputValue);
+function taskList(e){
+
+e.preventDefault()
+    if(value === ""){
+      console.log("Please enter something here!")
+    }
+
+    else{
+        console.log(value);
+    }
 }
